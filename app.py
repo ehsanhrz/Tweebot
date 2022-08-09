@@ -9,7 +9,7 @@ command = "run"
 run_sch = False
 # async def execute():
 #     sch.algho()
-@app.post('/api/tweebot')
+@app.post('/')
 def run():
     data = request.get_json()
     passwords = data['password']
