@@ -2,15 +2,10 @@ import schedule
 import xxx
 import main
 import time
+from apscheduler.schedulers.background import BackgroundScheduler
 
-
-def algho():
-
-    
-    schedule.every().day.at("23:45").do(xxx.main)
-    # schedule.every(2).minutes.do(main.telegram)
-    schedule.every(3).hour.at("11:30").to("23:30").do(main.telegram)
-    
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+if __name__ == '__main__':
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(xxx.main,'cron',day_of_week = '0-6', hour = '23', minute = '45',timezone = 'Asia/Tehran')
+    scheduler.add_job(main.telegram,'cron',day_of_week = '0-6', hour = '17', minute = '50,51,52,53,54,55,56',timezone = 'Asia/Tehran')
+    scheduler.start()
