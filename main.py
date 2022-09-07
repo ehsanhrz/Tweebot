@@ -51,6 +51,10 @@ def telegram():
     df.to_csv(filename)
 
 
+if __name__ == '__main__':
+    telegram()
+
+
 
           
     
