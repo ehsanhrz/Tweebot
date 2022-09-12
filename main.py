@@ -31,7 +31,7 @@ def telegram():
                     # if not 'https' in text:
                         # clean_tweet = re.sub("#[A-Za-z0-9_]","", text)
                         # clean_tweet = re.sub("#[\u0600-\u06FF\s0-9_]","", clean_tweet)
-                app.send_message("Food_For_All", f"\n<div><h1>\n{i[1]}\n</h1></div><p>\n{text}\n</p>")
+                app.send_message("Fun_tweets", f"\n<div><h1>\n{i[1]}\n</h1></div><p>\n{text}\n</p>")
                 time.sleep(2)
                 twee.remove(i)
                 j += 1
