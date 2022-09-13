@@ -34,8 +34,10 @@ def client_scrape(words, start_time, end_time, numtweet):
 	for user in tweets[1]['users']:
 		username.append(user.username)
 		# print(user.username)
-	tweets[0].to_json('test.json')
-	tweets[1].to_json('test2.json')
+	tweets0DF = pd.DataFrame(tweets[0])
+	tweets1DF = pd.DataFrame(tweets[1])
+	tweets0DF.to_json('test.json')
+	tweets1DF.to_json('test2.json')
 
 	a =	{'username': username,'text' : text}
 	dd = pd.DataFrame.from_dict(a,orient='index')
