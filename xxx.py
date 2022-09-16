@@ -31,25 +31,25 @@ def client_scrape(words, start_time, end_time, numtweet):
 	likes = []
 	for tweet in tweets[0]:
 		text.append(tweet.text)
-		# print(tweet.text)
+		likes.append(tweet.public_metrics.like_count)
 	for user in tweets[1]['users']:
 		username.append(user.username)
 	
 	# for metrics in tweets[0]:
 	# 	likes.append(metrics.public_metrics.like_count)
 		# print(user.username)
-	tweets0DF = pd.DataFrame(tweets[0])
-	tweets1DF = pd.DataFrame(tweets[1])
-	tweets0DF.to_json('test.json')
-	tweets1DF.to_json('test2.json')
-	tweets_test = pd.DataFrame(tweets[2])
-	tweets_test.to_json('test3.json')
+	# tweets0DF = pd.DataFrame(tweets[0])
+	# tweets1DF = pd.DataFrame(tweets[1])
+	# tweets0DF.to_json('test.json')
+	# tweets1DF.to_json('test2.json')
+	# tweets_test = pd.DataFrame(tweets[2])
+	# tweets_test.to_json('test3.json')
 	########
 	a =	{'username': username,'text' : text, 'likes':likes}
 	dd = pd.DataFrame.from_dict(a,orient='index')
 	dd = dd.transpose()
 	filename = 'tweets.csv'
-	test = dd.sort('likes', ascending=False)
+	test = dd.sort_values(by='likes', ascending=False)
 	test.to_csv(filename)
 
 
