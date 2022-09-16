@@ -38,7 +38,7 @@ def client_scrape(words, start_time, end_time, numtweet):
 	# tweets1DF = pd.DataFrame(tweets[1])
 	# tweets0DF.to_json('test.json')
 	# tweets1DF.to_json('test2.json')
-
+	########
 	a =	{'username': username,'text' : text}
 	dd = pd.DataFrame.from_dict(a,orient='index')
 	dd = dd.transpose()
