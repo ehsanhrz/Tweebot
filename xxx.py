@@ -31,9 +31,9 @@ def client_scrape(words, start_time, end_time, numtweet):
 	likes = []
 	for tweet in tweets[0]:
 		text.append(tweet.text)
-	
-	for likes_count in tweets[0]['public_metrics']:
-		likes.append(likes_count.like_count)
+		likes.append(tweet.public_metrics['like_count'])
+	# for likes_count in tweets[0]['public_metrics']:
+	# 	likes.append(likes_count.like_count)
 	for user in tweets[1]['users']:
 		username.append(user.username)
 	
