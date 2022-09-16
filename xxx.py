@@ -51,7 +51,7 @@ def main():
 	end_time = datetime.datetime.now()
 	numtweet = 100
 	# print(start_time, end_time)
-	client_scrape(u"(#طنز OR #خنده OR #جوک OR #کمدی OR #خنده_دار) lang:fa -is:retweet -is:reply", start_time,end_time, numtweet)
+	client_scrape(u"(#طنز OR #خنده OR #جوک OR #کمدی OR 😂 😂 😂  OR #خنده_دار) lang:fa -is:retweet -is:reply", start_time,end_time, numtweet)
 	# print('Scraping has completed!')
 
 if __name__ == '__main__':
