@@ -48,7 +48,7 @@ def client_scrape(words, start_time, end_time, numtweet):
 
 def main():
 	start_time = datetime.datetime.utcnow() - datetime.timedelta(hours=2) 
-	end_time = datetime.datetime.utcnow()
+	end_time = datetime.datetime.utcnow() - datetime.timedelta(seconds=15)
 	numtweet = 100
 	# print(start_time, end_time)
 	client_scrape(u"(#طنز OR #خنده OR #جوک OR #کمدی OR 😂 😂 😂  OR #خنده_دار) lang:fa -is:retweet -is:reply", start_time,end_time, numtweet)
