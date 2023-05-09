@@ -13,8 +13,8 @@ import re
 def telegram():
 
     api_hash = 9659698
-    api_key =  "d31a844c171b841c5889ebaedcd86acf"
-    app = Client('Food_For_All',api_hash, api_key, bot_token="5331853611:AAFAYSYr_dJRp9vFC_q_t-GZU_9A5mtv0xA")
+    api_key =  "***************************"
+    app = Client('Food_For_All',api_hash, api_key, bot_token="****************")
 
     twee = []
     with open("./tweets.csv", encoding="utf-8") as csv_file:
