@@ -8,11 +8,11 @@ from tweepy import Client
 # import jsonpickle
 # from json import dump, encoder
 
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAFaBbgEAAAAA8DXS4QTGwcTFfew0G3qNSVaokwA%3DOZ9WWcNNQ7VtmbFN5MikeZDIget4PBcqFnouiivhxlVq3BnwGc"
-consumer_key = "sdrLvjrFdmisIF4xcZClmUr09"
-consumer_secret = "ZVM2EsN2q1BGWhpSejP70VfsHUHyWmp7CgZxZHaHGZSqky0OCz"
-access_token = "1516026377421602818-3hjmbHz0G0TcqwOLMJ7p76Vu9ndVyP"
-access_token_secret= "y5ER3YBvGbBsCkqrmvr51UePas59CP2s6rPOwkreGPSoT"
+bearer_token = "********************************"
+consumer_key = "****************************"
+consumer_secret = "***********************"
+access_token = "***************************"
+access_token_secret= "***************************"
 
 
 client = tweepy.Client(bearer_token,consumer_key,consumer_secret,access_token,access_token_secret)
